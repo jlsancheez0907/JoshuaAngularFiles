@@ -1,8 +1,21 @@
 <div class='panel panel-primary'>
   <div class='panel-heading'>
     {{pageTitle + ':' + product.productName}}
+    <div class="col-sm-6" style="color:#060505; margin-top:10%">
+        <p><b>Product Name: </b> {{product.productName}}</p>
+        <p><b>Product Code: </b> {{product.productCode | lowercase| ToSpaces:'-'}}</p>
+        <p><b>Product Relase Date: </b> {{product.releaseDate}}</p>
+        <p><b>Product Price: </b> {{product.price | currency:'USD':true:'1.2-2'}}</p>
+    </div>
+    <div class="col-sm-6" style="color:#060505; margin-top:5%">
+      <img src={{product.imageUrl}} title={{product.productName}} />
+    </div>
+  </div>
+  <div class='panel-body'>
+
   </div>
   <div class='panel-footer'>
+    
     <a class='btn btn-default' (click)='onBack()' style='width:80px'>
         <i class='glyphicon glyphicon-chevron-left'></i> Back
     </a>
