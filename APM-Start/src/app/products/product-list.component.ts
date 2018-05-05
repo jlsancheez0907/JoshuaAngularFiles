@@ -22,7 +22,7 @@ export class ProductListComponent implements OnInit {
         this._listFilter = value;
         this.filteredProducts = this._listFilter ? this.performFilter(this._listFilter) : this.products;
     }
-
+    
     filteredProducts: IProduct[];
     
     products: IProduct[] = [];
